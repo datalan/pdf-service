@@ -52,6 +52,7 @@ namespace PdfService
 				{
 					using (PdfReader pdfReader = new PdfReader(pdfTemplate))
 					{
+						PdfReader.unethicalreading = true;
 						PdfStamper pdfStamper = new PdfStamper(pdfReader, ms);
 						AcroFields pdfFormFields = pdfStamper.AcroFields;
 						// set form pdfFormFields
