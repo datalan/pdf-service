@@ -12,6 +12,9 @@ namespace PdfService
 	public interface IPdfService
 	{
 		[OperationContract]
-		ServiceResult CreatePDFFile(Dictionary<string,string> pdfData, string pdfTemplate);
+		ServiceResult CreatePDFFile(Dictionary<string, string> pdfData, string pdfTemplate, bool lockForm);
+
+		[OperationContract]
+		ServiceResult CreateMultiPagePDFFile(List<Dictionary<string, string>> pdfDataLst, string pdfTemplate, bool lockForm);
 	}
 }
